@@ -1,0 +1,10 @@
+# dbt/transforms/08_covid/sources.yml
+
+version: 4
+
+sources:
+  - name: raw
+    schema: raw
+    tables:
+      - name: raw___covid19_ez
+        description: "Raw COVID-19 daily stats for ezi, loaded via dlt."

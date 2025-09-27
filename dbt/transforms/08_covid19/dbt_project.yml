@@ -1,0 +1,7 @@
+# The new, simplified project file
+
+name: 'covid_project_ezi'
+version: '1.0.0'
+config-version: 2
+profile: 'clickhouse_ftw'
+model-paths: ["."]

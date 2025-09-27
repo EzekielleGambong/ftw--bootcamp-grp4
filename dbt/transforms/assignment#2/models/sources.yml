@@ -1,0 +1,28 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw 
+    tables:
+      - name: customer
+        identifier: chinook_raw_grp4___customer
+      - name: invoice
+        identifier: chinook_raw_grp4___invoice
+      - name: invoice_line
+        identifier: chinook_raw_grp4___invoice_line
+      - name: artist
+        identifier: chinook_raw_grp4___artist
+      - name: album
+        identifier: chinook_raw_grp4___album
+      - name: track
+        identifier: chinook_raw_grp4___track
+      - name: media_type
+        identifier: chinook_raw_grp4___media_type
+      - name: playlist
+        identifier: chinook_raw_grp4___playlist
+      - name: playlist_track
+        identifier: chinook_raw_grp4___playlist_track
+      - name: employee
+        identifier: chinook_raw_grp4___employee
+      - name: genre
+        identifier: chinook_raw_grp4___genre
