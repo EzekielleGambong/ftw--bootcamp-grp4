@@ -26,7 +26,7 @@ Follow the structure below, fill in your team’s work, and use it as both inter
 ## 2. Architecture & Workflow
 
 - **Pipeline Flow:**  
-  *(Diagram or describe: raw → clean → mart → BI.)*  
+  raw → clean → mart → Metabase  
 
 - **Tools Used:**  
   - Ingestion: `dlt`  
@@ -179,22 +179,8 @@ In practice, this means information is split across many distinct tables linked 
 
 ## 7. Future Improvements
 
-- **Next Steps with More Time:**  
-  *(E.g., add orchestration with Airflow/Prefect, implement testing, optimize queries, handle larger datasets.)*  
+- **Next Steps with More Time:**
+  *Testing & Validation: Implement tests, data quality checks*
+- **Generalization:**
+  *Domain Transfer: The same workflow can be used for finance, healthcare, or retail datasets by adjusting the schema and transformations.*
 
-- **Generalization:**  
-  *(How this workflow could be applied to other datasets or business domains.)*  
-
----
-
-## 📢 Presentation Tips
-
-- Keep it **5–10 minutes**, like a project walkthrough.  
-- Use **diagrams, screenshots, and SQL snippets**.  
-- Focus on both **technical process** and **business insights**.  
-- End with your **key learnings and future improvements**.  
-- For other documentation tips. Read [this](TECHNICAL-DOCS.md).
-
----
-
-✅ By filling this template, your group will produce a professional-style project guide **just like real data engineers** — clear, structured, and insight-driven.
