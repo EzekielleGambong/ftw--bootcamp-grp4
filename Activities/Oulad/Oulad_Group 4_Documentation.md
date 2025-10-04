@@ -14,10 +14,10 @@
   *While our team agreed to work individually, Ezi took on most of the workload and made a significant contribution to our project*
 - **Environment Setup:**
   *Docker containers on a shared VM + local laptops.
-  Ingestion: dlt
-  Modeling: dbt
-  Visualization: Metabase
-  Collaboration: Git + GitHub*  
+  - Ingestion: dlt
+  - Modeling: dbt
+  - Visualization: Metabase
+  - Collaboration: Git + GitHub*  
 
 ---
 
@@ -31,21 +31,21 @@
   - Visualization: `Metabase`
 - **Medallion Architecture Application:**
   - **Bronze (Raw):**
-    Purpose: To ingest and permanently store source data in its original, unaltered state. This layer serves as a historical archive and a reliable source for disaster recovery.
-    Key Activities:
-    Data is loaded from all sources (APIs, databases, files) with no transformations.
-    We preserve the original schema, column names, and data types.
-    Data is typically appended, creating a complete, auditable history of every record we've ever received.
-    State of the Data: Raw and exactly as it came from the source.
+    - Purpose: To ingest and permanently store source data in its original, unaltered state. This layer serves as a historical archive and a reliable source for disaster recovery.
+    - Key Activities:
+    - Data is loaded from all sources (APIs, databases, files) with no transformations.
+    - We preserve the original schema, column names, and data types.
+    - Data is typically appended, creating a complete, auditable history of every record we've ever received.
+    - State of the Data: Raw and exactly as it came from the source.
   - **Silver (Clean):**
-  Purpose: To provide a reliable, queryable "single source of truth" for major business entities.
-  Key Activities:
-  Cleaning: We handle missing values, deduplicate records, and fix data quality issues.
-  Conforming: We standardize data types, apply consistent naming conventions, and ensure conformity across different sources.
-  Enriching: We join tables from different sources to create a more complete view.
-  State of the Data: Validated, cleaned, and organized by business concepts, but not yet aggregated for specific reports. This layer is often used by data analysts and scientists for exploration.
+  - Purpose: To provide a reliable, queryable "single source of truth" for major business entities.
+  - Key Activities:
+  - Cleaning: We handle missing values, deduplicate records, and fix data quality issues.
+  - Conforming: We standardize data types, apply consistent naming conventions, and ensure conformity across different sources.
+  - Enriching: We join tables from different sources to create a more complete view.
+  - State of the Data: Validated, cleaned, and organized by business concepts, but not yet aggregated for specific reports. This layer is often used by data analysts and scientists for exploration.
   - **Gold (Mart):**
-We build our star schemas (fact and dimension tables) in this layer. 
+- We build our star schemas (fact and dimension tables) in this layer. 
 
 ![oulad_dashboard2](./oulad_dashboard2.png)
 
