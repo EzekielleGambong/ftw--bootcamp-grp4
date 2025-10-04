@@ -1,0 +1,17 @@
+version: 2
+
+sources:
+  - name: raw
+    schema: raw 
+    tables:
+      - name: studentinfo
+        identifier: studentVle
+      - name: informations
+        identifier: _4grp_raw___raw_student_info_4grp
+      - name: courses
+        identifier: _4grp_raw___raw_courses_4grp
+      - name: studentRegistration
+        identifier: _4grp_raw___raw_student_registration_4grp
+      - name: studentAssessment
+        identifier: _4grp_raw___raw_student_assessment_4grp
+      

@@ -1,0 +1,56 @@
+version: 3
+models:
+  - name: 4grp_cleaned_studentInfo_information
+    description: "Standardized loaded from clean.4grp_cleaned_studentInfo_information"
+    columns:
+      - name: id_student
+        description: "Student ID"
+        tests:
+          - not_null
+      - name: gender
+        description: "Gender"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['M', 'F']
+      - name: region
+        description: "Region"
+        tests: [not_null]
+      - name: highest_education
+        description: "Highest level of education"
+        tests: [not_null]
+      - name: imd_band
+        description: "Index of Multiple Deprivation band"
+        tests: [not_null]
+      - name: age_band
+        description: "Age band of student"
+        tests: [not_null]
+      - name: disability
+        description: "Disability status"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Y', 'N']
+  - name: 4grp_cleaned_studentInfo_registration
+    description: "Standardized loaded from clean.4grp_cleaned_studentInfo_registration"
+    columns:
+      - name: id_student
+        description: "Student ID"
+        tests:
+          - not_null
+      - name: code_module
+        description: "Module code"
+        tests:
+          - not_null
+      - name: code_presentation
+        description: "Presentation code"
+        tests: [not_null]
+      - name: num_of_prev_attempts
+        description: "Number of previous attempts"
+        tests: [not_null]
+      - name: studied_credits
+        description: "Number of credits studied"
+        tests: [not_null]
+      - name: final_result
+        description: "Final result of the module"
+        tests: [not_null]
