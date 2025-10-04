@@ -24,13 +24,16 @@
 ## 2. Architecture & Workflow
 
 - **Pipeline Flow:**
+  ```
   raw → clean → mart → Metabase
+  ```
 - **Tools Used:**
   - Ingestion: `dlt`
   - Modeling: `dbt`
   - Visualization: `Metabase`
 - **Medallion Architecture Application:**
-  - **Bronze (Raw):**
+
+ - **Bronze (Raw):**
     - Purpose: To ingest and permanently store source data in its original, unaltered state. This layer serves as a historical archive and a reliable source for disaster recovery.
     - Key Activities:
     - Data is loaded from all sources (APIs, databases, files) with no transformations.
@@ -47,6 +50,7 @@
   - **Gold (Mart):**
 - We build our star schemas (fact and dimension tables) in this layer. 
 
+
 ![oulad_dashboard2](./oulad_dashboard2.png)
 
 ---
@@ -56,19 +60,27 @@
 - **Source Structure (Normalized):**  
  The diagram shows the flow of data from raw sources through a series of transformations into a Mart Schema:
   1. Data Sources:
-    - studentInfo.csv
+    ```
+	- studentInfo.csv
     - studentRegistration.csv
     - courses.csv
+	```
   2. Raw Schema:
   The raw data from each source is loaded into the raw schema:
+	```
     - raw_student_info
     - raw_student_registration
     - raw_courses
+	```
+	
   3. Clean Schema:
   After cleaning and preprocessing, the data is transformed into the clean schema:
+  ```
     - clean_studentInfo
     - clean_studentRegistration
     - clean_courses
+	```
+	
   4. Mart Schema:
   The cleaned data is then further processed into the mart schema, where it is modeled for analysis:
     - dim_student: Contains student-related information, likely including demographics.
@@ -114,6 +126,7 @@
 
 
   To calculate dropout rate:
+```
 SELECT
     dmp.code_module,
     dmp.code_presentation,
@@ -126,7 +139,7 @@ GROUP BY
     dmp.code_presentation
 ORDER BY
     dropout_rate_percent DESC; 
-  
+```  
    
 
 - **Key Insights:**  
