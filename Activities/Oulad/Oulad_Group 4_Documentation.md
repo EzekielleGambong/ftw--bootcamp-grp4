@@ -81,7 +81,7 @@
 ![oulad_dashboard1](./oulad_dashboard1.png) 
 
 - **Challenges / Tradeoffs:**  
-- Inconsistent Data Types: Many columns that should be categorical or numeric (e.g., gender, region, imd_band) are stored as nullable strings, leading to inefficiencies in storage and analysis.
+- Inconsistent Data Types: Many columns that should be categorical or numeric are stored as nullable strings, leading to inefficiencies in storage and analysis.
 - Date Handling Issues: Date fields are inconsistently typed—some stored as strings, others as integers—making date-based operations error-prone and harder to standardize.
 - Duplicate Identifiers: Primary keys (e.g., student_key, module_presentation_key) appear with duplicate values across tables, indicating potential data quality issues or lack of enforced uniqueness constraints. 
 
